@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@2.1.0/build/pure-min.css" integrity="sha384-yHIFVG6ClnONEA5yB5DJXfW2/KC173DIQrYoZMEtBvGzmf0PKiGyNEqe9N6BNDBH" crossorigin="anonymous">
+        <link rel="stylesheet" href="static/style.css?v=0220">
+    </head>
+    <body>
+        <div class="contents">
+            <h1>
+                会員制川柳SNS
+            </h1>
+            <form action="/try_login" method="POST" class="pure-form pure-form-stacked">
+                <legend>ログインが必要です<legend>
+                <fieldset>
+                    <label for="user">ユーザ名</label>
+                    <input type="text" name="user" id="user">
+                    <label for="user">パスワード</label>
+                    <input type="password" name="pw" id="pw">
+                    <button type="submit" class="pure-button pure-button-primary">ログイン</button>
+                </fieldset>
+            </form>
+        </div>
+    </body>
+
+</html>

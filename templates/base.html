@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="urf-8">
+        <title>川柳SNS</title>
+        <meta name="description" content="川柳を投稿して公開することができます">
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@2.1.0/build/pure-min.css" integrity="sha384-yHIFVG6ClnONEA5yB5DJXfW2/KC173DIQrYoZMEtBvGzmf0PKiGyNEqe9N6BNDBH" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="static/style.css">
+    </head>
+    <body>
+        <!-- ヘッダー -->
+        <header class="page-header-bg">
+            <div class="page-header pure-g">
+                <h1 class="pure-u-1">
+                    <a href="/" class="logo-title">
+                        <!-- <img class="logo" src="static/favicon.png" alt="Yusukeのポートフォリオ"> -->
+                        <div class="logo-title-text">川柳SNS</div>
+                    </a>
+                </h1>
+                <nav class="pure-u-1">
+                    <div class="pure-g">
+                        <div class="pure-u-6-24 menu-item"><a href="/">タイムライン</a></div>
+                        <div class="pure-u-6-24 menu-item"><a href="/mypage">マイページ</a></div>
+                        <div class="pure-u-6-24 menu-item"><a href="/create_senryu">川柳投稿</a></div>
+                        <div class="pure-u-6-24 menu-item"><a href="/logout">ログアウト</a></div>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- メインコンテンツ -->
+        <div class="wrapper">
+            {% block contents %}
+            <!-- ここにメインコンテンツ -->
+            {% endblock %}
+        </div>
+    </body>
+    {% block footer %}
+    <!-- ここにスクリプトを書く -->
+    {% endblock %}
+</html>

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block contents%}
+            <!-- 川柳 -->
+            <div class="senryu_list">
+                {% for senryu in senryu_list %}
+                <div class="senryu_card">
+                      {{senryu.contents}}<br>
+                    <p  style="text-align:right">by {{senryu.user_id}}</p>
+                    <div style="text-align:right">{{senryu.create_at}}</div>
+                </div>
+                {% endfor %}
+            </div>
+{% endblock %}

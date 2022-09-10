@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block contents%}
+            <!-- 川柳 -->
+            <div class="senryu_list">
+                {% for senryu in senryu_list %}
+                <div class="senryu_card">
+                      {{senryu.contents}}<br>
+                    <p  style="text-align:right">by {{senryu.user_id}}</p>
+                    <div style="text-align:right">{{senryu.create_at}}</div>
+                    <form action="/delete" onSubmit="return checkSubmit()" method="POST">
+                        <button type="submit" name="id" value="{{senryu.id}}" class="pure-button button-warning">削除</button>
+                    </form>
+                </div>
+                {% endfor %}
+            </div>
+{% endblock %}
+{% block footer%}
+    <script type="text/javascript">
+    function checkSubmit() {
+        return confirm("削除しても良いですか？");
+    }
+    </script>
+{% endblock %}

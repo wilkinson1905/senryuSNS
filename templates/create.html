@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block contents%}
+            <!-- 川柳書き込みフォーム -->
+            <form action="/post_senryu" method="POST" class="pure-form pure-form-stacked create-senryu">
+                <p>あなたの川柳を投稿してください</p>
+                <input type="text" name="senryu" id="senryu">
+                <button type="submit" class="pure-button pure-button-primary">投稿</button>
+            </form>
+{% endblock %}
